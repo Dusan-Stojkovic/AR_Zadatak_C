@@ -146,7 +146,7 @@ primarni:                   #odredjuje brojeve i pretvara ih u interni oblik
     konstruktor:            #konstruktor pravi mesta za jos cifra u %eax
         addb $4, %ch        #svaka cifra zauzima 4 bita!
         cmpb $32, %ch
-            ja prekoracenje_cifra
+            je prekoracenje_cifra
         shll $4, %eax
         jmp switch
     # greska: broj veci od 32 bit
